@@ -17,6 +17,18 @@ from app.simulator import IEEE33BusSimulator
 from app.agent import DQNAgent
 from app.services.live_api import LiveGridAPIService
 
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Sabhi origins ko allow karne ke liye
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger("EV-ChargeAI")
 
