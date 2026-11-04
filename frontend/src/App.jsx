@@ -10,7 +10,8 @@ import {
   Terminal, Server, Power, AlertOctagon, HelpCircle
 } from 'lucide-react';
 
-const WS_URL = 'ws://localhost:8000/ws/grid-stream';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000';
 const MAX_HISTORY = 30;
 
 export default function App() {
@@ -136,7 +137,7 @@ export default function App() {
 
   const handleReset = async () => {
     try {
-      await fetch('http://localhost:8000/api/reset', { method: 'POST' });
+      await fetch(`${BACKEND_URL}/api/reset`, { method: 'POST' });
       setHistory([]);
       setRewardHistory([]);
       setLossHistory([]);
@@ -156,7 +157,7 @@ export default function App() {
   const handleExportReport = async () => {
     setIsExporting(true);
     try {
-      const resp = await fetch('http://localhost:8000/api/report');
+      const resp = await fetch(`${BACKEND_URL}/api/report`);
       const data = await resp.json();
       setReportData(data);
       setShowReportModal(true);
