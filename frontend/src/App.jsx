@@ -10,8 +10,8 @@ import {
   Terminal, Server, Power, AlertOctagon, HelpCircle
 } from 'lucide-react';
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
-const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000';
+const BACKEND_URL = 'https://ev-charge-ai-9nx9.vercel.app'|| 'http://localhost:8000';
+const WS_URL = 'wss://ev-charge-ai-9nx9.vercel.app'|| 'ws://localhost:8000';
 const MAX_HISTORY = 30;
 
 export default function App() {
