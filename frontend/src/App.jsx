@@ -10,8 +10,8 @@ import {
   Terminal, Server, Power, AlertOctagon, HelpCircle
 } from 'lucide-react';
 
-const BACKEND_URL = 'https://ev-charge-ai-git-main-saurav-a6bc.vercel.app';
-const WS_URL = 'wss://ev-charge-ai-git-main-saurav-a6bc.vercel.app/ws/grid-stream';
+const BACKEND_URL = 'https://ev-charge-ai-owdq.vercel.app/';
+const WS_URL = 'wss://ev-charge-ai-owdq.vercel.app/';
 const MAX_HISTORY = 30;
 export default function App() {
   const [activeTab, setActiveTab] = useState('telemetry'); // 'telemetry' | 'analytics' | 'contingency'
