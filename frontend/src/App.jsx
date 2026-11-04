@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 const BACKEND_URL = 'https://ev-chargeai.onrender.com';
-const WS_URL = 'wss://https://ev-chargeai.onrender.com/ws/grid-stream';
+const WS_URL = 'wss://ev-chargeai.onrender.com/ws/grid-stream';
 const MAX_HISTORY = 30;
 export default function App() {
   const [activeTab, setActiveTab] = useState('telemetry'); // 'telemetry' | 'analytics' | 'contingency'
