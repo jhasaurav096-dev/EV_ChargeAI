@@ -10,8 +10,8 @@ import {
   Terminal, Server, Power, AlertOctagon, HelpCircle
 } from 'lucide-react';
 
-const BACKEND_URL = 'https://ev-charge-ai-git-main-saurav-a6bc.vercel.app/'|| 'http://localhost:8000';
-//const WS_URL = 'wss://ev-charge-ai-git-main-saurav-a6bc.vercel.app/ws/grid-stream'|| 'ws://localhost:8000';
+const BACKEND_URL = 'https://ev-charge-ai-git-main-saurav-a6bc.vercel.app';
+const WS_URL = 'wss://ev-charge-ai-git-main-saurav-a6bc.vercel.app/ws/grid-stream';
 const MAX_HISTORY = 30;
 
 export default function App() {
